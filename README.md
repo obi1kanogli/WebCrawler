@@ -9,16 +9,17 @@ Note: I developed this program in a Python 3.9.0 pyenv environment on MacOS Big 
 
 ## Run
 
-| Option     | Type   | Description                                        |
-|------------|--------|----------------------------------------------------|
-| --base_url | String | Base url of website to start crawler at [required] |
-| --limit    | Int    | Number of pages to process                         |
-| --threads  | Int    | Number of threads for parallel processing          |
-| --help     |        | Show this message and exit.                        |
+| Option     | Type   | Description                                              |
+|------------|--------|----------------------------------------------------------|
+| --base_url | String | Base url of website to start crawler at [required]       |
+| --limit    | Int    | Number of pages to process [Default: 100]                |
+| --threads  | Int    | Number of threads for parallel processing [Default: 20]  |
+| --help     |        | Show this message and exit.                              |
 
 Example basic execution:  
 `python3 crawler.py --base_url="https://www.pdx.edu"`
 
+Limit acts as a stopping condition.  
 Example run with custom limit and/or threads:  
 `python3 crawler.py --base_url="https://www.pdx.edu" --limit=30 --threads=10`
 
