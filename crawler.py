@@ -36,7 +36,9 @@ def main(base_url, limit, threads):
     start = timer()
     fetch_urls(base_url)
     ThreadPool(threads).map(fetch_urls, urls[:(limit - 1)])
-    print(f"Elapsed Time: {timer() - start} for {limit} pages")
+    elapsed = timer() - start
+    print(f"Elapsed Time: {elapsed} for {limit} pages")
+    return elapsed
 
 
 if __name__ == "__main__":
